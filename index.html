@@ -15,82 +15,70 @@
 <body>
 
     <div id="page">
-        <div class="page-content">
-
-        <div class="card card-style ">
-            <h4 class="font-23 text-center pt-3 mt-3 cb-brand">
-                <a href="#" data-menu="menu-share-modal" class="btn rounded-sm btn-m  bg-highlight font-700">Open Modal</a>
-
-            </h4>
-            <p class="boxed-text-xxl mb-4 mt-lg-3 line-height-m p-3">
-
-            </p>
-            <div class="text-center mb-4">
-                <a href="#" class="icon icon-xs rounded-sm shadow-l mr-1 bg-facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="icon icon-xs rounded-sm shadow-l mr-1 bg-phone"><i class="fa fa-phone"></i></a>
-                <a href="#" data-menu="menu-share" class="icon icon-xs rounded-sm mr-1 shadow-l bg-red-dark"><i class="fa fa-share-alt"></i></a>
-                <a href="#" class="back-to-top icon icon-xs rounded-sm shadow-l bg-highlight color-white"><i class="fa fa-arrow-up"></i></a>
-            </div>
-
-
-
-
-
-
-            <div class="divider mb-3"></div>
-            <div class="row text-center mb-3 pl-3 pr-3">
-                <a class="font-11 col-4" href="#">Privacy Policy</a>
-                <a class="font-11 col-4" href="#">Terms of Service</a>
-                <a class="font-11 col-4" href="#">Contact Support</a>
-            </div>
+        <div class="header header-fixed header-logo-center header-auto-show">
+            <a href="index.html" class="header-title">Subscriptions</a>
+            <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
+            <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i class="fas fa-sun"></i></a>
+            <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-light"><i class="fas fa-moon"></i></a>
         </div>
-
-</div>
-        <div id="menu-share-modal" 
-        class="menu menu-box-modal rounded-m" 
-        data-menu-width="350"
-        data-menu-height="400">
-       <div class="menu-title">
-           <p class="color-highlight">Tap a link to</p>
-           <h1>Share</h1>
-           <a href="#" class="close-menu"><i class="fa fa-times-circle"></i></a>
-       </div>
-       <div class="divider divider-margins mt-3 mb-0"></div>
-       <div class="content mt-0">
-           <div class="list-group list-custom-small">
-               <a href="auto_generated">
-                   <i class="shareToFacebook external-link fab fa-facebook-f font-12 bg-facebook color-white shadow-l rounded-l"></i>
-                   <span>Facebook</span>
-                   <i class="fa fa-angle-right me-2"></i>
-               </a>
-               <a href="auto_generated">
-                   <i class="shareToTwitter external-link fab fa-twitter font-12 bg-twitter color-white shadow-l rounded-l"></i>
-                   <span>Twitter</span>
-                   <i class="fa fa-angle-right me-2"></i>
-               </a>
-               <a href="auto_generated">
-                   <i class="shareToLinkedIn external-link fab fa-linkedin-in font-12 bg-linkedin color-white shadow-l rounded-l"></i>
-                   <span>LinkedIn</span>
-                   <i class="fa fa-angle-right me-2"></i>
-               </a>
-               <a href="auto_generated">
-                   <i class="shareToWhatsApp external-link fab fa-whatsapp font-12 bg-whatsapp color-white shadow-l rounded-l"></i>
-                   <span>WhatsApp</span>
-                   <i class="fa fa-angle-right me-2"></i>
-               </a>
-               <a href="auto_generated">
-                   <i class="shareToMail external-link fa fa-envelope font-12 bg-mail color-white shadow-l rounded-l"></i>
-                   <span>Email</span>
-                   <i class="fa fa-angle-right me-2"></i>
-               </a>
-               <a href="#" class="close-menu border-0">
-                   <i class="fa fa-times font-12 bg-red-dark color-white shadow-l rounded-l"></i>
-                   <span>Close</span>
-                   <i class="fa fa-angle-right me-2"></i>
-               </a>
-           </div>
-       </div>
-   </div>
+    
+                
+        <div class="page-content pb-0">
+            
+            
+            <div class="card rounded-0 mb-0" data-card-height="cover-full">
+                <div class="card-center ps-3">
+                    <div class="text-center">
+                        <h1 class="font-40 font-800 pb-2">App<span class="gradient-highlight p-2 mx-1 color-white scale-box d-inline-block rounded-s border-0">Kit</span></h1>
+                        <h5 class="mt-n2 opacity-30 mb-4">Powered by Enabled.</h5>
+                    </div>
+                    
+                    <div class="ms-3 me-4 mb-n3">
+                        <div class="input-style no-borders no-icon validate-field mb-4">
+                            <input type="name" class="form-control validate-name" id="form1a" placeholder="Username">
+                            <label for="form1a" class="color-highlight">Username</label>
+                            <i class="fa fa-times disabled invalid color-red-dark"></i>
+                            <i class="fa fa-check disabled valid color-green-dark"></i>
+                            <em>(required)</em>
+                        </div>
+                        <div class="input-style no-borders no-icon validate-field mb-4">
+                            <input type="password" class="form-control validate-password" id="form1ab" placeholder="Password">
+                            <label for="form1ab" class="color-highlight">Password</label>
+                            <i class="fa fa-times disabled invalid color-red-dark"></i>
+                            <i class="fa fa-check disabled valid color-green-dark"></i>
+                            <em>(required)</em>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-check icon-check text-start float-start opacity-50">
+                            <input class="form-check-input" type="checkbox" value="" id="check4">
+                            <label class="form-check-label font-13" for="check4">Remember Me</label>
+                            <i class="icon-check-1 far fa-circle color-gray-dark font-14"></i>
+                            <i class="icon-check-2 fa fa-check-circle font-14 color-highlight"></i>
+                        </div>
+    
+                        <a href="#" class="font-11 float-end color-theme opacity-30">Forgot Password?</a>
+                        <div class="clearfix"></div>
+                    </div>
+    
+                    
+                    <a href="#" class="btn btn-center-l gradient-highlight rounded-sm btn-l font-13 font-600 mt-5 border-0">Sign In</a>
+                    <span class="text-center d-block font-600 opacity-30 mt-3 mb-3">or</span>
+                    <div class="text-center">
+                        <a href="#" class="icon bg-transparent icon-m border rounded-xl border-xs mx-1 border-gray-dark color-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon bg-transparent icon-m border rounded-xl border-xs mx-1 border-gray-dark color-google"><i class="fab fa-google"></i></a>
+                        <a href="#" class="icon bg-transparent icon-m border rounded-xl border-xs mx-1 border-gray-dark color-twitter"><i class="fab  font-18 fa-twitter"></i></a>
+                    </div>
+                    
+                </div>
+            </div>    
+        </div>
+        
+        
+        <!-- Page content ends here-->
+             
+        
+    </div>
 
     </div>
 
