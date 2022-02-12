@@ -15,7 +15,7 @@
 <body>
 
     <div id="page">
-
+            <div class="page-content">
 
         <div class="header header-fixed header-logo-center header-auto-show">
             <a href="index.html" class="header-title">Subscriptions</a>
@@ -38,16 +38,57 @@
             </div>
         </div>
 
+
+
+
+
+        <h1>Native Share API test</h1>
+        <button id="share">Share this page!</button>
+        <p id="msglog"></p>
+        <div class="warning"><h3>Warning:</h3>Behind a flag on chrome, other browsers unsupported/unchecked
+        <a target="_BLANK" href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a></div>
+        <p>Read also: <a href="https://github.com/mgiuca/web-share-target" target="_BLANK">Receiving shared data in a website</a><p>
+
+
+
+
+
         <!-- Page content ends here-->
              
         
+            </div>
+
+ 
+
+
     </div>
+<script> 
+var msglog = document.querySelector('#msglog');
 
-    </div>
+function log(msg) {
+  msglog.innerHTML = msg + '<br />' + msglog.innerHTML;
+}
 
-
-
-
+document
+  .querySelector('#share')
+  .addEventListener('click', function() {
+    if (typeof navigator.share === 'undefined') {
+      log("No share API available!");
+    } else {
+      navigator.share({
+        title: 'Menu',
+        files: 'cleaar.pdf',
+        
+        text: 'Shared with Native Share API'
+      })
+      
+        .then(function() { log("Share success!"); })
+        .catch(function() { log("Share failure!"); });
+      }
+    }
+                    
+ 
+); </script>
     <script src="https://bigchop.tech/wp-content/plugins/cdn-go/scripts/bootstrap.min.js"></script>
     <script src="https://bigchop.tech/wp-content/plugins/cdn-go/scripts/custom.js"></script>
 
