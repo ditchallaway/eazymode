@@ -55,29 +55,32 @@
 
     </div>
 <script> 
-var msglog = document.querySelector('#msglog');
+fetch("Url-image-complete")
+.then(function(response) {
+    return response.blob()
+  })
+.then(function(blob) {
 
-function log(msg) {
-  msglog.innerHTML = msg + '<br />' + msglog.innerHTML;
-}
+    var file = new File([blob], "clear.pdf", {type: 'application/pdf'});
+    var filesArray = [file];
+    var shareData = { files: filesArray };
 
-document
-  .querySelector('#share')
-  .addEventListener('click', function() {
-    if (typeof navigator.share === 'undefined') {
-      log("No share API available!");
+
+    if (navigator.canShare && navigator.canShare(shareData)) {
+
+    // Adding title afterwards as navigator.canShare just
+    // takes files as input
+    shareData.title = "clear"
+
+    navigator.share(shareData)
+    .then(() => console.log('Share was successful.'))
+    .catch((error) => console.log('Sharing failed', error));
+
     } else {
-      navigator.share({
-        title: 'Menu',
-        files: 'cleaar.pdf',
-        
-        text: 'Shared with Native Share API'
-      })
-      
-        .then(function() { log("Share success!"); })
-        .catch(function() { log("Share failure!"); });
-      }
+    console.log("Your system doesn't support sharing files.");
     }
+ 
+});
                     
  
 ); </script>
